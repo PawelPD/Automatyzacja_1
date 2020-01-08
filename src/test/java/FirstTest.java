@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 
@@ -20,7 +21,9 @@ public class FirstTest {
     void test()
     {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://pdsklep.e-kei.pl/");
         System.out.println("Przeglądarka otworzona");
