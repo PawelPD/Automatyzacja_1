@@ -27,6 +27,7 @@ public class FirstTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://pdsklep.e-kei.pl/");
         System.out.println("Przeglądarka otworzona");
+		driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[1]/div[2]/div[1]/ul/li[2]/a")).click();
         driver.close();
     }
 
