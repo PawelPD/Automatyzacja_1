@@ -40,7 +40,7 @@ public class SecondTest {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("jakas strona second class");
-        driver.get("https://df")
+        driver.get("https://df");
 		System.out.println("po second class");
     }
 
