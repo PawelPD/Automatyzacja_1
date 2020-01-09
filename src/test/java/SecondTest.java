@@ -32,11 +32,17 @@ public class SecondTest {
     }
 
 	@Test(priority = 3)
-		void teardown()
-		{
-			Assert.assertTrue(false);
-			System.out.println("close second class");
-		}
+    void teardown()
+    {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("jakas strona second class");
+        driver.get("https://df")
+		System.out.println("po second class");
+    }
 
 
 }
