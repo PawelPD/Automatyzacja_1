@@ -31,12 +31,12 @@ public class SecondTest {
         driver.close();
     }
 
-@Test(priority = 3)
-    void teardown()
-    {
-        Assert.assertTrue(false);
-        System.out.println("close second class");
-    }
+	@Test(priority = 3)
+		void teardown()
+		{
+			Assert.assertTrue(false);
+			System.out.println("close second class");
+		}
 
 
 }
