@@ -7,13 +7,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 
-public class FirstTest {
+public class SecondTest {
 
     @Test(priority = 1)
     void setup()
     {
 
-        System.out.println("Opening Browser");
+        System.out.println("Opening Browser second class");
 
     }
 
@@ -26,7 +26,7 @@ public class FirstTest {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://pdsklep.e-kei.pl/");
-        System.out.println("Przeglądarka otworzona");
+        System.out.println("Przeglądarka otworzona Second class");
 		driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[1]/div[2]/div[1]/ul/li[2]/a")).click();
         driver.close();
     }
@@ -34,7 +34,7 @@ public class FirstTest {
     @Test(priority = 3)
     void teardown()
     {
-        System.out.println("close");
+        System.out.println("close second class");
     }
 
 
