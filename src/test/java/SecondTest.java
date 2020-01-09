@@ -28,6 +28,7 @@ public class SecondTest {
         driver.get("https://pdsklep.e-kei.pl/");
         System.out.println("Przeglądarka otworzona Second class");
 		driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[1]/div[2]/div[1]/ul/li[2]/a")).click();
+		driver.findElement(By.xpath("/html/body/main/section/div/div[2]/section/section/div[3]/div/div[1]/article[1]/div/a/img")).click();
         driver.close();
     }
 
