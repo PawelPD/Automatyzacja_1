@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2">
+    <!--<test verbose="2" preserve-order="true" name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2"> -->
 
+    <test name="Strona glowna">
         <classes>
-
-            <class name="FirstTest"/>
-            <class name="SecondTest"/>
+            <class name="com.shop.tests.FirstTest"/>
         </classes>
-
     </test>
 </suite>
