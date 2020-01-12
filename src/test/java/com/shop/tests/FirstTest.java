@@ -45,8 +45,10 @@ public class FirstTest extends TestBase {
      * Test przejscia do okna zalogowania"
      * */
     @Test(priority = 1, description = "Przejście do ekranu logowania")
-    public void goToLoginPageTest() {
+    public void goToLoginPageTest() throws InterruptedException {
         homePage = new HomePage();
+        loginPage = new LoginPage();
+        Thread.sleep(5000);
         homePage.goToLogin();
         //String loginText = homePage.validateLoginPageText();
         //Assert.assertEquals(loginText, "Zaloguj się do swojego konta");
