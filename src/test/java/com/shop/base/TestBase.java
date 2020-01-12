@@ -3,6 +3,7 @@ package com.shop.base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -56,15 +57,18 @@ public class TestBase {
 
         public static void initialization() {
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-            //ChromeOptions options = new ChromeOptions();
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+
+            options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+            driver = new ChromeDriver(options);
+            //driver = new ChromeDriver();
             //driver.get(prop.getProperty("url"));
             setDriverDimGetURL();
         }
 
     private static void setDriverDimGetURL() {
         driver.manage().deleteAllCookies();
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
@@ -98,6 +102,7 @@ public class TestBase {
     public void waitForElement(String locator) {
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+
     }
 
     public void waitForElement(WebElement we) {
