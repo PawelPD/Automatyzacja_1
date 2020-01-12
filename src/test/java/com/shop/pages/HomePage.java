@@ -12,7 +12,7 @@ public class HomePage extends TestBase {
     @FindBy(id = "_desktop_logo")
     WebElement homePageLogo;
 
-    @FindBy(xpath="//*[@title='Zaloguj się do swojego konta klienta']")
+    @FindBy(className= "hidden-sm-down")
     WebElement loginButton;
 
     @FindBy(xpath="//*[@id='main']/header/h1")
