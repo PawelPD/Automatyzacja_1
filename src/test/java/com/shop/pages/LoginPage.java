@@ -32,8 +32,11 @@ public class LoginPage extends TestBase {
     }
 
     public LoginPage doLogin(String user, String pass) {
+        System.out.println("doLogin");
         waitForElement(username);
         waitForElement(password);
+        username.clear();
+        password.clear();
         username.sendKeys(user);
         password.sendKeys(pass);
         try {

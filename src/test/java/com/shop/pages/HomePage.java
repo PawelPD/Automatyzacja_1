@@ -31,6 +31,8 @@ public class HomePage extends TestBase {
     @FindBy(id = "category-10")
     WebElement categoryPersonalizowane;
 
+    @FindBy(xpath = "//*[@id='__cp']/a")
+    WebElement cookiesAccept;
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -47,12 +49,24 @@ public class HomePage extends TestBase {
 
 
     public HomePage goToLogin() {
+        System.out.println("goToLogin");
         try {
             loginButton.click();
         }catch (Exception e){
             retryingFindClick(loginButton);
         }
 
+        return this;
+    }
+
+    public HomePage goToCookiesAccept(){
+        System.out.println("goToCookiesAccept");
+        try {
+            waitForElement(cookiesAccept);
+            cookiesAccept.click();
+        }catch (Exception e){
+            retryingFindClick(cookiesAccept);
+        }
         return this;
     }
 
