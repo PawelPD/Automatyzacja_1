@@ -59,9 +59,9 @@ public class TestBase {
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
 
-            options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
-            driver = new ChromeDriver(options);
-            //driver = new ChromeDriver();
+            //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+            //driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
             //driver.get(prop.getProperty("url"));
             setDriverDimGetURL();
         }
