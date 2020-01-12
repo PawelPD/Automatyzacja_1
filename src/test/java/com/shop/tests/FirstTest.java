@@ -148,8 +148,8 @@ public class FirstTest extends TestBase {
     @Test(priority = 8, description = "Test podsumowania i platnosci")
     public  void shoppingPaymentTest() throws InterruptedException {
         orderPage = new OrderPage();
-        boolean flag1 = orderPage.validateOrderPageText();
-        Assert.assertTrue(flag1);
+        //boolean flag1 = orderPage.validateOrderPageText();
+        //Assert.assertTrue(flag1);
         orderPage.editAddressButtonTest();
         orderPage.companyTextTest();
         orderPage.phoneTextTest();
