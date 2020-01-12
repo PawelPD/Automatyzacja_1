@@ -48,67 +48,87 @@ public class FirstTest extends TestBase {
     public void goToLoginPageTest() throws InterruptedException {
         homePage = new HomePage();
         loginPage = new LoginPage();
-        Thread.sleep(5000);
+
+        Thread.sleep(1000);
+        loginPage.goToCookiesAccept();
+        Thread.sleep(1000);
         homePage.goToLogin();
         //String loginText = homePage.validateLoginPageText();
         //Assert.assertEquals(loginText, "Zaloguj się do swojego konta");
     }
 
     @Test(priority = 2, description = "Logowania do konta klienta")
-    public  void loginTest(){
+    public  void loginTest() throws InterruptedException {
         loginPage = new LoginPage();
+        Thread.sleep(500);
         //String title2 = loginPage.validateLoginPageTitle();
         //Assert.assertEquals(title2, "Nazwa użytkowika");
         loginPage.doLogin(prop.getProperty("user"),prop.getProperty("pass"));
         //String title3 = loginPage.homePageTextAfterLogin();
         //Assert.assertEquals(title3, "Twoje konto");
-        loginPage.goToCookiesAccept();
     }
 
     @Test(priority = 3, description = "Tworzenie koszyka - kategoria odziez")
     public  void shoppingCartOdziezTest() throws InterruptedException {
         shoppingCart = new ShoppingCart();
+        Thread.sleep(500);
         shoppingCart.goToCategoryOdziez();
         //String category = shoppingCart.categoryTextTest();
         //Assert.assertEquals(category, "ODZIEŻ");
+        Thread.sleep(500);
         driver.findElement(By.xpath(shoppingCart.odziezFinalXpath)).click();
+        Thread.sleep(500);
         shoppingCart.addToCard();
+        Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 4, description = "Tworzenie koszyka - kategoria akcesoria")
     public  void shoppingCartAkcesoriaTest() throws InterruptedException {
         shoppingCart = new ShoppingCart();
+        Thread.sleep(500);
         shoppingCart.goToCategoryAkcesoria();
         //String category = shoppingCart.categoryTextTest();
         //Assert.assertEquals(category, "AKCESORIA");
+        Thread.sleep(500);
         driver.findElement(By.xpath(shoppingCart.akcesoriaFinalXpath)).click();
+        Thread.sleep(500);
         shoppingCart.addToCard();
+        Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 5, description = "Tworzenie koszyka - kategoria sztuka")
     public  void shoppingCartSztukaTest() throws InterruptedException {
         shoppingCart = new ShoppingCart();
+        Thread.sleep(500);
         shoppingCart.goToCategorySztuka();
         //String category = shoppingCart.categoryTextTest();
         //Assert.assertEquals(category, "SZTUKA");
+        Thread.sleep(500);
         driver.findElement(By.xpath(shoppingCart.sztukaFinalXpath)).click();
+        Thread.sleep(500);
         shoppingCart.addToCard();
+        Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 6, description = "Tworzenie koszyka - kategoria personalizowane")
     public  void shoppingCartPersonalizowaneTest() throws InterruptedException {
         shoppingCart = new ShoppingCart();
+        Thread.sleep(500);
         shoppingCart.goToCategoryPersonalizowane();
         //String category = shoppingCart.categoryTextTest();
         //Assert.assertEquals(category, "PERSONALIZOWANE");
+        Thread.sleep(500);
         driver.findElement(By.xpath(shoppingCart.personalizowaneFinalXpath)).click();
+        Thread.sleep(500);
         shoppingCart.addTextMessageToPersonalizowane();
         //String message = shoppingCart.categoryTextTest();
         //Assert.assertEquals(message, "Twoje dostosowywanie: tekst testowy 1.");
+        Thread.sleep(500);
         shoppingCart.addToCard();
+        Thread.sleep(500);
         shoppingCart.endShopping();
     }
 
@@ -121,6 +141,7 @@ public class FirstTest extends TestBase {
         //Assert.assertEquals(numberOfItems, "4 sztuk");
         //String shippingCost = cartCheckout.cshippingCostTextTest();
         //Assert.assertEquals(shippingCost, "15,00 zł");
+        Thread.sleep(500);
         cartCheckout.endCheckoutButtonTest();
     }
 
