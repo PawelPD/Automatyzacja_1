@@ -4,6 +4,7 @@ import com.shop.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 
 public class CartCheckout extends TestBase {
@@ -24,7 +25,7 @@ public class CartCheckout extends TestBase {
     WebElement customerInfoButton;
 
     public CartCheckout() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
 

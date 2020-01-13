@@ -4,6 +4,7 @@ import com.shop.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import java.util.Random;
 
@@ -70,7 +71,7 @@ public class ShoppingCart extends TestBase {
     WebElement endShoppingButton;
 
     public ShoppingCart() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
     public String categoryTextTest(){

@@ -150,7 +150,7 @@ public class FirstTest extends TestBase {
         orderPage = new OrderPage();
         //boolean flag1 = orderPage.validateOrderPageText();
         //Assert.assertTrue(flag1);
-        orderPage.editAddressButtonTest();
+        orderPage.editAddressButtonTest2();
         //orderPage.customerInfoButtonTest();
         //orderPage.editAddressButtonTest();
         orderPage.companyTextTest();

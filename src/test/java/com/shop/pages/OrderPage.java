@@ -4,6 +4,9 @@ import com.shop.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+
+import java.util.List;
 
 
 public class OrderPage extends TestBase {
@@ -63,12 +66,17 @@ public class OrderPage extends TestBase {
     WebElement editAddressButton3;
 
     @FindBy(xpath = ".//*[contains(text(), 'Dalej')]")
+    List<WebElement> editAdressButton;
+    //WebElement editAddressButton4;
+
+
+    @FindBy(xpath = ".//*[contains(text(), 'Dalej')]")
     WebElement customerInfoButton;
 
 
 
     public OrderPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
 
@@ -210,6 +218,16 @@ public class OrderPage extends TestBase {
                     retryingFindClick(editAddressButton3);
                 }
             }
+        }
+        return this;
+    }
+
+    public OrderPage editAddressButtonTest2() throws Exception {
+        try {
+            waitForElement(editAdressButton.get(1));
+            editAdressButton.get(1).click();
+        }catch (Exception e){
+            retryingFindClick(editAdressButton.get(1));
         }
         return this;
     }
