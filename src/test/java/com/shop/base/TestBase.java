@@ -68,7 +68,7 @@ public class TestBase {
 
     private static void setDriverDimGetURL() {
         driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
@@ -232,10 +232,10 @@ public class TestBase {
         return result;
     }
 
-    public boolean retryingFindClick(WebElement we) {
+    public boolean retryingFindClick(WebElement we) throws Exception {
         boolean result = false;
         int attempts = 0;
-        System.out.println("Blad klikniecia uruchomiono retryingFindClick");
+        System.out.println("Blad klikniecia uruchomiono retryingFindClick: " + we.getTagName());
         while (attempts < 3) {
             try {
                 System.out.println("retryingFindClick proba: " + attempts);
@@ -246,6 +246,9 @@ public class TestBase {
             }
 
             attempts++;
+            if (attempts == 4){
+                throw new Exception();
+            }
         }
         return result;
     }

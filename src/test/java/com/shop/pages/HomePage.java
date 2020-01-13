@@ -48,7 +48,7 @@ public class HomePage extends TestBase {
     }
 
 
-    public HomePage goToLogin() {
+    public HomePage goToLogin() throws Exception {
         System.out.println("goToLogin");
         try {
             loginButton.click();
@@ -59,7 +59,7 @@ public class HomePage extends TestBase {
         return this;
     }
 
-    public HomePage goToCookiesAccept(){
+    public HomePage goToCookiesAccept() throws Exception {
         System.out.println("goToCookiesAccept");
         try {
             waitForElement(cookiesAccept);

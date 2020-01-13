@@ -31,7 +31,7 @@ public class LoginPage extends TestBase {
         return driver.getTitle();
     }
 
-    public LoginPage doLogin(String user, String pass) {
+    public LoginPage doLogin(String user, String pass) throws Exception {
         System.out.println("doLogin");
         waitForElement(username);
         waitForElement(password);
@@ -53,7 +53,7 @@ public class LoginPage extends TestBase {
         return homePageText.getText();
     }
 
-    public LoginPage goToCookiesAccept(){
+    public LoginPage goToCookiesAccept() throws Exception {
         try {
             waitForElement(cookiesAccept);
             cookiesAccept.click();

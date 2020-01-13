@@ -45,7 +45,7 @@ public class FirstTest extends TestBase {
      * Test przejscia do okna zalogowania"
      * */
     @Test(priority = 1, description = "Przejście do ekranu logowania")
-    public void goToLoginPageTest() throws InterruptedException {
+    public void goToLoginPageTest() throws Exception {
         homePage = new HomePage();
         loginPage = new LoginPage();
 
@@ -58,7 +58,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 2, description = "Logowania do konta klienta")
-    public  void loginTest() throws InterruptedException {
+    public  void loginTest() throws Exception {
         loginPage = new LoginPage();
         Thread.sleep(500);
         //String title2 = loginPage.validateLoginPageTitle();
@@ -69,7 +69,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 3, description = "Tworzenie koszyka - kategoria odziez")
-    public  void shoppingCartOdziezTest() throws InterruptedException {
+    public  void shoppingCartOdziezTest() throws Exception {
         shoppingCart = new ShoppingCart();
         Thread.sleep(500);
         shoppingCart.goToCategoryOdziez();
@@ -84,7 +84,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 4, description = "Tworzenie koszyka - kategoria akcesoria")
-    public  void shoppingCartAkcesoriaTest() throws InterruptedException {
+    public  void shoppingCartAkcesoriaTest() throws Exception {
         shoppingCart = new ShoppingCart();
         Thread.sleep(500);
         shoppingCart.goToCategoryAkcesoria();
@@ -99,7 +99,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 5, description = "Tworzenie koszyka - kategoria sztuka")
-    public  void shoppingCartSztukaTest() throws InterruptedException {
+    public  void shoppingCartSztukaTest() throws Exception {
         shoppingCart = new ShoppingCart();
         Thread.sleep(500);
         shoppingCart.goToCategorySztuka();
@@ -114,7 +114,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 6, description = "Tworzenie koszyka - kategoria personalizowane")
-    public  void shoppingCartPersonalizowaneTest() throws InterruptedException {
+    public  void shoppingCartPersonalizowaneTest() throws Exception {
         shoppingCart = new ShoppingCart();
         Thread.sleep(500);
         shoppingCart.goToCategoryPersonalizowane();
@@ -133,7 +133,7 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 7, description = "Test utworzonego korzyka")
-    public  void shoppingCartCheckoutTest() throws InterruptedException {
+    public  void shoppingCartCheckoutTest() throws Exception {
         cartCheckout = new CartCheckout();
         //String cartText = cartCheckout.cartCheckoutTextTest();
         //Assert.assertEquals(cartText, "KOSZYK");
@@ -146,11 +146,13 @@ public class FirstTest extends TestBase {
     }
 
     @Test(priority = 8, description = "Test podsumowania i platnosci")
-    public  void shoppingPaymentTest() throws InterruptedException {
+    public  void shoppingPaymentTest() throws Exception {
         orderPage = new OrderPage();
         //boolean flag1 = orderPage.validateOrderPageText();
         //Assert.assertTrue(flag1);
         orderPage.editAddressButtonTest();
+        //orderPage.customerInfoButtonTest();
+        //orderPage.editAddressButtonTest();
         orderPage.companyTextTest();
         orderPage.phoneTextTest();
         orderPage.vatnumberTextTest();

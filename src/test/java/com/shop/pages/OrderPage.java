@@ -53,8 +53,12 @@ public class OrderPage extends TestBase {
     @FindBy(id = "//*[@id='payment-confirmation']/div[1]/button")
     WebElement paymentconfirmationButton;
 
-    @FindBy(xpath = "//*[@id='id-address-delivery-address-4']/footer/a[1]")
+    @FindBy(xpath = "//*[@id='id-address-delivery-address-5']/footer/a[1]")
     WebElement editAddressButton;
+
+    @FindBy(xpath = ".//*[contains(text(), 'Dalej')]")
+    WebElement customerInfoButton;
+
 
 
     public OrderPage() {
@@ -136,7 +140,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage confirmAddressButtonTest(){
+    public OrderPage confirmAddressButtonTest() throws Exception {
         try {
             waitForElement(confirmAddressButton);
             confirmAddressButton.click();
@@ -146,7 +150,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage confirmDeliveryButtonTest(){
+    public OrderPage confirmDeliveryButtonTest() throws Exception {
         try {
             waitForElement(confirmDeliveryButton);
             confirmDeliveryButton.click();
@@ -156,7 +160,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage paymentoptionButtonTest(){
+    public OrderPage paymentoptionButtonTest() throws Exception {
         try {
             waitForElement(paymentoptionButton);
             paymentoptionButton.click();
@@ -166,7 +170,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage termsCheckboxTest(){
+    public OrderPage termsCheckboxTest() throws Exception {
         try {
             waitForElement(termsCheckbox);
             termsCheckbox.click();
@@ -176,7 +180,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage paymentconfirmationBittonTest(){
+    public OrderPage paymentconfirmationBittonTest() throws Exception {
         try {
             waitForElement(paymentconfirmationButton);
             paymentconfirmationButton.click();
@@ -186,7 +190,7 @@ public class OrderPage extends TestBase {
         return this;
     }
 
-    public OrderPage editAddressButtonTest(){
+    public OrderPage editAddressButtonTest() throws Exception {
         try {
             waitForElement(editAddressButton);
             editAddressButton.click();
@@ -196,6 +200,15 @@ public class OrderPage extends TestBase {
         return this;
     }
 
+    public OrderPage customerInfoButtonTest() throws Exception {
+        try {
+            waitForElement(customerInfoButton);
+            customerInfoButton.click();
+        }catch (Exception e){
+            retryingFindClick(customerInfoButton);
+        }
+        return this;
+    }
 
 
 }

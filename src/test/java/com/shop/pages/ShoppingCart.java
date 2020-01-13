@@ -66,7 +66,7 @@ public class ShoppingCart extends TestBase {
     @FindBy(xpath = ".//*[contains(text(), 'Kontynuuj zakupy')]")
     public WebElement continueShoppingButton;
 
-    @FindBy(xpath = ".//*[contains(text(), 'Realizuj zamówienie')]")
+    @FindBy(xpath = "//*[@id='blockcart-modal']/div/div/div[2]/div/div[2]/div/div/a")
     WebElement endShoppingButton;
 
     public ShoppingCart() {
@@ -83,7 +83,7 @@ public class ShoppingCart extends TestBase {
         return messageText.getText();
     }
 
-    public ShoppingCart goToCategoryOdziez() {
+    public ShoppingCart goToCategoryOdziez() throws Exception {
         try {
             waitForElement(categoryOdziez);
             categoryOdziez.click();
@@ -93,7 +93,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart goToCategoryAkcesoria() {
+    public ShoppingCart goToCategoryAkcesoria() throws Exception {
         try {
             waitForElement(categoryAkcesoria);
             categoryAkcesoria.click();
@@ -104,7 +104,7 @@ public class ShoppingCart extends TestBase {
     }
 
 
-    public ShoppingCart goToCategorySztuka() {
+    public ShoppingCart goToCategorySztuka() throws Exception {
         try {
             waitForElement(categorySztuka);
             categorySztuka.click();
@@ -114,7 +114,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart goToCategoryPersonalizowane() {
+    public ShoppingCart goToCategoryPersonalizowane() throws Exception {
         try {
             waitForElement(categoryPersonalizowane);
             categoryPersonalizowane.click();
@@ -124,7 +124,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart addTextMessageToPersonalizowane() {
+    public ShoppingCart addTextMessageToPersonalizowane() throws Exception {
         waitForElement(addTextMessage);
         addTextMessage.sendKeys("Tekst testowy 1.");
         try {
@@ -137,7 +137,7 @@ public class ShoppingCart extends TestBase {
     }
 
 
-    public ShoppingCart addToCard(){
+    public ShoppingCart addToCard() throws Exception {
         try {
             waitForElement(addToCardButton);
             addToCardButton.click();
@@ -147,7 +147,7 @@ public class ShoppingCart extends TestBase {
         return this;
     }
 
-    public ShoppingCart continueShopping(){
+    public ShoppingCart continueShopping() throws Exception {
         try {
             waitForElement(continueShoppingButton);
             continueShoppingButton.click();
@@ -157,7 +157,7 @@ public class ShoppingCart extends TestBase {
         return this;
     }
 
-    public ShoppingCart endShopping(){
+    public ShoppingCart endShopping() throws Exception {
         try {
             waitForElement(endShoppingButton);
             endShoppingButton.click();
