@@ -1,5 +1,5 @@
-package com.shop.pages;
 
+package com.shop.pages;
 import com.shop.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

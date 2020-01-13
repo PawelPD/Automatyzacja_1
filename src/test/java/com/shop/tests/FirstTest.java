@@ -162,6 +162,8 @@ public class FirstTest extends TestBase {
         orderPage.paymentoptionButtonTest();
         orderPage.termsCheckboxTest();
         orderPage.paymentconfirmationBittonTest();
+        boolean flag3 = driver.getTitle().equals("Potwierdzenie zamówienia");
+        Assert.assertTrue(flag3);
         boolean flag2 = orderPage.validateOrderPageTite();
         Assert.assertTrue(flag2);
     }

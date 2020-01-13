@@ -17,9 +17,7 @@ import java.util.Calendar;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
 public class TestBase {
-
     public static WebDriver driver;
     /*
      * Zmienna odpowiedzialna za przekazywanie parametrów dla poszczególnych środowisk
