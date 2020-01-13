@@ -50,7 +50,7 @@ public class OrderPage extends TestBase {
     @FindBy(id = "conditions_to_approve[terms-and-conditions]")
     WebElement termsCheckbox;
 
-    @FindBy(id = "/html/body/section/div/section/div/div[1]/section[4]/div/div[3]/div[1]/button")
+    @FindBy(xpath = "/html/body/section/div/section/div/div[1]/section[4]/div/div[3]/div[1]/button")
     WebElement paymentconfirmationButton;
 
     @FindBy(xpath = "//*[@id='id-address-delivery-address-4']/footer/a[1]")
