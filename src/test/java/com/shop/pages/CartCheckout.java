@@ -29,17 +29,17 @@ public class CartCheckout extends TestBase {
     }
 
 
-    public String cartCheckoutTextTest(){
+    public String cartCheckoutTextTest() throws InterruptedException {
         waitForElement(cartText);
         return cartText.getText();
     }
 
-    public String numberOfItemsTextTest(){
+    public String numberOfItemsTextTest() throws InterruptedException {
         waitForElement(numberOfItems);
         return numberOfItems.getText();
     }
 
-    public String cshippingCostTextTest(){
+    public String cshippingCostTextTest() throws InterruptedException {
         waitForElement(shippingCost);
         return shippingCost.getText();
     }

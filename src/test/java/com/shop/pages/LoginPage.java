@@ -49,7 +49,7 @@ public class LoginPage extends TestBase {
         return this;
     }
 
-    public String homePageTextAfterLogin(){
+    public String homePageTextAfterLogin() throws InterruptedException {
         waitForElement(homePageText);
         return homePageText.getText();
     }

@@ -105,8 +105,13 @@ public class TestBase {
 
     }
 
-    public void waitForElement(WebElement we) {
+    public void waitForElementVisivility(WebElement we) throws InterruptedException {
+        Thread.sleep(1000);
+        new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(we));
+    }
 
+    public void waitForElement(WebElement we) throws InterruptedException {
+        Thread.sleep(1000);
         new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(we));
     }
 
@@ -235,7 +240,6 @@ public class TestBase {
     public boolean retryingFindClick(WebElement we) throws Exception {
         boolean result = false;
         int attempts = 0;
-        Thread.sleep(500);
         System.out.println("Blad klikniecia uruchomiono retryingFindClick: " + we.toString());
         while (attempts < 3) {
             try {

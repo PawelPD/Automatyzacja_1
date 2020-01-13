@@ -6,16 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-import java.util.List;
-
 
 public class OrderPage extends TestBase {
-
-    @FindBy(xpath = ".//*[contains(text(),'Wybrany adres będzie stosowany zarówno jako adres osobisty (do faktury) i jako adres dostawy.')]")
-    WebElement orderPageText;
-
-    @FindBy(xpath = "Twoje zamówienie zostało potwierdzone")
-    WebElement confirmOrderText;
 
     @FindBy(name = "company")
     WebElement companyText;
@@ -65,8 +57,8 @@ public class OrderPage extends TestBase {
     @FindBy(xpath = "//*[@id='id-address-delivery-address-6']/footer/a[1]")
     WebElement editAddressButton3;
 
-    @FindBy(xpath = ".//*[contains(text(), 'Dalej')]")
-    List<WebElement> editAdressButton;
+    @FindBy(css = ".edit-address")
+    WebElement editAdressButton;
     //WebElement editAddressButton4;
 
 
@@ -80,74 +72,60 @@ public class OrderPage extends TestBase {
     }
 
 
-    public boolean validateOrderPageText(){
-        waitForElement(orderPageText);
-        return orderPageText.isDisplayed();
+    public boolean validateOrderPageTite() throws InterruptedException {
+        return driver.getTitle().equals("Potwierdzenie zamówienia");
     }
 
-    public boolean validateConfirmOrderText(){
-        waitForElement(confirmOrderText);
-        return confirmOrderText.isDisplayed();
-    }
-
-    public OrderPage companyTextTest()
-    {
+    public OrderPage companyTextTest() throws InterruptedException {
         waitForElement(companyText);
         companyText.clear();
         companyText.sendKeys("Testowa nazwa firmy");
         return this;
     }
 
-    public OrderPage phoneTextTest()
-    {
+    public OrderPage phoneTextTest() throws InterruptedException {
         waitForElement(phoneText);
         phoneText.clear();
         phoneText.sendKeys("123456789");
         return this;
     }
 
-    public OrderPage vatnumberTextTest()
-    {
+    public OrderPage vatnumberTextTest() throws InterruptedException {
         waitForElement(vatnumberText);
         vatnumberText.clear();
         vatnumberText.sendKeys("0123456789");
         return this;
     }
 
-    public OrderPage address1TextTest()
-    {
+    public OrderPage address1TextTest() throws InterruptedException {
         waitForElement(address1Text);
         address1Text.clear();
         address1Text.sendKeys("Adres testowy 1");
         return this;
     }
 
-    public OrderPage address2TextTest()
-    {
+    public OrderPage address2TextTest() throws InterruptedException {
         waitForElement(address2Text);
         address2Text.clear();
         address2Text.sendKeys("Adres testowy 2");
         return this;
     }
 
-    public OrderPage postcodeTekstTest()
-    {
+    public OrderPage postcodeTekstTest() throws InterruptedException {
         waitForElement(postcodeTekst);
         postcodeTekst.clear();
         postcodeTekst.sendKeys("00-000");
         return this;
     }
 
-    public OrderPage cityTextTest()
-    {
+    public OrderPage cityTextTest() throws InterruptedException {
         waitForElement(cityText);
         cityText.clear();
         cityText.sendKeys("Warszawa");
         return this;
     }
 
-    public OrderPage deliveryMessageTextTest()
-    {
+    public OrderPage deliveryMessageTextTest() throws InterruptedException {
         waitForElement(deliveryMessageText);
         deliveryMessageText.clear();
         deliveryMessageText.sendKeys("Tekst testowy dostawy");
@@ -201,7 +179,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(paymentconfirmationButton);
         }
-        return this;
+        return new OrderPage();
     }
 
     public OrderPage editAddressButtonTest() throws Exception {
@@ -224,10 +202,10 @@ public class OrderPage extends TestBase {
 
     public OrderPage editAddressButtonTest2() throws Exception {
         try {
-            waitForElement(editAdressButton.get(1));
-            editAdressButton.get(1).click();
+            waitForElement(editAdressButton);
+            editAdressButton.click();
         }catch (Exception e){
-            retryingFindClick(editAdressButton.get(1));
+            retryingFindClick(editAdressButton);
         }
         return this;
     }

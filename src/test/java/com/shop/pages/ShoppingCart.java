@@ -74,12 +74,12 @@ public class ShoppingCart extends TestBase {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
-    public String categoryTextTest(){
+    public String categoryTextTest() throws InterruptedException {
         waitForElement(categoryText);
         return categoryText.getText();
     }
 
-    public String messageTextTest(){
+    public String messageTextTest() throws InterruptedException {
         waitForElement(messageText);
         return messageText.getText();
     }

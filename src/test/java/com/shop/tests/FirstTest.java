@@ -148,11 +148,7 @@ public class FirstTest extends TestBase {
     @Test(priority = 8, description = "Test podsumowania i platnosci")
     public  void shoppingPaymentTest() throws Exception {
         orderPage = new OrderPage();
-        //boolean flag1 = orderPage.validateOrderPageText();
-        //Assert.assertTrue(flag1);
         orderPage.editAddressButtonTest2();
-        //orderPage.customerInfoButtonTest();
-        //orderPage.editAddressButtonTest();
         orderPage.companyTextTest();
         orderPage.phoneTextTest();
         orderPage.vatnumberTextTest();
@@ -166,7 +162,7 @@ public class FirstTest extends TestBase {
         orderPage.paymentoptionButtonTest();
         orderPage.termsCheckboxTest();
         orderPage.paymentconfirmationBittonTest();
-        boolean flag2 = orderPage.validateConfirmOrderText();
+        boolean flag2 = orderPage.validateOrderPageTite();
         Assert.assertTrue(flag2);
     }
 
