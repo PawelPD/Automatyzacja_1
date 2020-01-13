@@ -235,7 +235,8 @@ public class TestBase {
     public boolean retryingFindClick(WebElement we) throws Exception {
         boolean result = false;
         int attempts = 0;
-        System.out.println("Blad klikniecia uruchomiono retryingFindClick: " + we.getTagName());
+        Thread.sleep(500);
+        System.out.println("Blad klikniecia uruchomiono retryingFindClick: " + we.toString());
         while (attempts < 3) {
             try {
                 System.out.println("retryingFindClick proba: " + attempts);

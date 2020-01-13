@@ -50,11 +50,17 @@ public class OrderPage extends TestBase {
     @FindBy(id = "conditions_to_approve[terms-and-conditions]")
     WebElement termsCheckbox;
 
-    @FindBy(id = "//*[@id='payment-confirmation']/div[1]/button")
+    @FindBy(id = "/html/body/section/div/section/div/div[1]/section[4]/div/div[3]/div[1]/button")
     WebElement paymentconfirmationButton;
 
+    @FindBy(xpath = "//*[@id='id-address-delivery-address-4']/footer/a[1]")
+    WebElement editAddressButton1;
+
     @FindBy(xpath = "//*[@id='id-address-delivery-address-5']/footer/a[1]")
-    WebElement editAddressButton;
+    WebElement editAddressButton2;
+
+    @FindBy(xpath = "//*[@id='id-address-delivery-address-6']/footer/a[1]")
+    WebElement editAddressButton3;
 
     @FindBy(xpath = ".//*[contains(text(), 'Dalej')]")
     WebElement customerInfoButton;
@@ -192,10 +198,18 @@ public class OrderPage extends TestBase {
 
     public OrderPage editAddressButtonTest() throws Exception {
         try {
-            waitForElement(editAddressButton);
-            editAddressButton.click();
+            waitForElement(editAddressButton1);
+            editAddressButton1.click();
         }catch (Exception e){
-            retryingFindClick(editAddressButton);
+            try {
+                editAddressButton2.click();
+            }catch (Exception e2){
+                try {
+                    editAddressButton3.click();
+                }catch (Exception e3){
+                    retryingFindClick(editAddressButton3);
+                }
+            }
         }
         return this;
     }
