@@ -41,7 +41,7 @@ public class OrderPage extends TestBase {
     @FindBy(name = "confirm-addresses")
     WebElement confirmAddressButton;
 
-    @FindBy(name = "confirm-addresses")
+    @FindBy(name = "confirmDeliveryOption")
     WebElement confirmDeliveryButton;
 
     @FindBy(id = "payment-option-2")
