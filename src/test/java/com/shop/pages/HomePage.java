@@ -19,28 +19,16 @@ public class HomePage extends TestBase {
     @FindBy(xpath="//*[@id='main']/header/h1")
     WebElement loginScreen;
 
-
-    @FindBy(id = "category-3")
-    WebElement categoryOdziez;
-
-    @FindBy(id = "category-6")
-    WebElement categoryAkcesoria;
-
-    @FindBy(id = "category-7")
-    WebElement categorySztuka;
-
-    @FindBy(id = "category-10")
-    WebElement categoryPersonalizowane;
-
     @FindBy(xpath = "//*[@id='__cp']/a")
     WebElement cookiesAccept;
+
 
     public HomePage() {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
 
-    public boolean validateHomePage() {
+    public boolean validateHomePageLogo() {
         return homePageLogo.isDisplayed();
     }
 
@@ -48,8 +36,12 @@ public class HomePage extends TestBase {
         return driver.getTitle();
     }
 
+    public String validateLoginPageTitle() {
+        return driver.getTitle();
+    }
 
-    public HomePage goToLogin() throws Exception {
+
+    public HomePage goToLogin(){
         System.out.println("goToLogin");
         try {
             loginButton.click();
@@ -60,7 +52,7 @@ public class HomePage extends TestBase {
         return this;
     }
 
-    public HomePage goToCookiesAccept() throws Exception {
+    public HomePage goToCookiesAccept(){
         System.out.println("goToCookiesAccept");
         try {
             waitForElement(cookiesAccept);

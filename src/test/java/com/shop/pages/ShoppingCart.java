@@ -11,7 +11,6 @@ import java.util.Random;
 
 public class ShoppingCart extends TestBase {
 
-    //WebDriverWait wait = new WebDriverWait(driver, 10);
 
     Random odziezRandom = new Random();
     Random akcesoriaRandom = new Random();
@@ -74,17 +73,17 @@ public class ShoppingCart extends TestBase {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
-    public String categoryTextTest() throws InterruptedException {
+    public String categoryTextTest(){
         waitForElement(categoryText);
         return categoryText.getText();
     }
 
-    public String messageTextTest() throws InterruptedException {
+    public String messageTextTest(){
         waitForElement(messageText);
         return messageText.getText();
     }
 
-    public ShoppingCart goToCategoryOdziez() throws Exception {
+    public ShoppingCart goToCategoryOdziez(){
         try {
             waitForElement(categoryOdziez);
             categoryOdziez.click();
@@ -94,7 +93,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart goToCategoryAkcesoria() throws Exception {
+    public ShoppingCart goToCategoryAkcesoria(){
         try {
             waitForElement(categoryAkcesoria);
             categoryAkcesoria.click();
@@ -105,7 +104,7 @@ public class ShoppingCart extends TestBase {
     }
 
 
-    public ShoppingCart goToCategorySztuka() throws Exception {
+    public ShoppingCart goToCategorySztuka(){
         try {
             waitForElement(categorySztuka);
             categorySztuka.click();
@@ -115,7 +114,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart goToCategoryPersonalizowane() throws Exception {
+    public ShoppingCart goToCategoryPersonalizowane(){
         try {
             waitForElement(categoryPersonalizowane);
             categoryPersonalizowane.click();
@@ -125,7 +124,7 @@ public class ShoppingCart extends TestBase {
         return new ShoppingCart();
     }
 
-    public ShoppingCart addTextMessageToPersonalizowane() throws Exception {
+    public ShoppingCart addTextMessageToPersonalizowane(){
         waitForElement(addTextMessage);
         addTextMessage.sendKeys("Tekst testowy 1.");
         try {
@@ -138,7 +137,7 @@ public class ShoppingCart extends TestBase {
     }
 
 
-    public ShoppingCart addToCard() throws Exception {
+    public ShoppingCart addToCard(){
         try {
             waitForElement(addToCardButton);
             addToCardButton.click();
@@ -148,7 +147,7 @@ public class ShoppingCart extends TestBase {
         return this;
     }
 
-    public ShoppingCart continueShopping() throws Exception {
+    public ShoppingCart continueShopping(){
         try {
             waitForElement(continueShoppingButton);
             continueShoppingButton.click();
@@ -158,7 +157,7 @@ public class ShoppingCart extends TestBase {
         return this;
     }
 
-    public ShoppingCart endShopping() throws Exception {
+    public ShoppingCart endShopping(){
         try {
             waitForElement(endShoppingButton);
             endShoppingButton.click();

@@ -28,11 +28,11 @@ public class LoginPage extends TestBase {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10),this);
     }
 
-    public String validateLoginPageTitle() {
+    public String validatePageAfterLoginTitle() {
         return driver.getTitle();
     }
 
-    public LoginPage doLogin(String user, String pass) throws Exception {
+    public LoginPage doLogin(String user, String pass){
         System.out.println("doLogin");
         waitForElement(username);
         waitForElement(password);
@@ -49,18 +49,9 @@ public class LoginPage extends TestBase {
         return this;
     }
 
-    public String homePageTextAfterLogin() throws InterruptedException {
+    public String homePageTextAfterLogin(){
         waitForElement(homePageText);
         return homePageText.getText();
     }
 
-    public LoginPage goToCookiesAccept() throws Exception {
-        try {
-            waitForElement(cookiesAccept);
-            cookiesAccept.click();
-        }catch (Exception e){
-            retryingFindClick(cookiesAccept);
-        }
-        return this;
-    }
 }

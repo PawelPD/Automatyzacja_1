@@ -35,137 +35,104 @@ public class FirstTest extends TestBase {
      * */
     @Test(priority = 0, description = "Strona gllowna")
     public void homeTest() {
-        //String title = homePage.validateHomePageTitle();
-        //Assert.assertEquals(title, "Sklep Odzieżowy");
-        boolean flag = homePage.validateHomePage();
-        Assert.assertTrue(flag);
+        String title = homePage.validateHomePageTitle();
+        Assert.assertEquals(title, "Sklep Odzieżowy");
     }
 
     /*
      * Test przejscia do okna zalogowania"
      * */
     @Test(priority = 1, description = "Przejście do ekranu logowania")
-    public void goToLoginPageTest() throws Exception {
+    public void goToLoginPageTest(){
         homePage = new HomePage();
-        loginPage = new LoginPage();
-
-        //Thread.sleep(1000);
-        loginPage.goToCookiesAccept();
-        //Thread.sleep(1000);
+        homePage.goToCookiesAccept();
         homePage.goToLogin();
-        //String loginText = homePage.validateLoginPageText();
-        //Assert.assertEquals(loginText, "Zaloguj się do swojego konta");
+        String title = homePage.validateLoginPageTitle();
+        Assert.assertEquals(title, "Nazwa użytkowika");
     }
 
     @Test(priority = 2, description = "Logowania do konta klienta")
-    public  void loginTest() throws Exception {
+    public  void loginTest(){
         loginPage = new LoginPage();
-        //Thread.sleep(500);
-        //String title2 = loginPage.validateLoginPageTitle();
-        //Assert.assertEquals(title2, "Nazwa użytkowika");
         loginPage.doLogin(prop.getProperty("user"),prop.getProperty("pass"));
-        //String title3 = loginPage.homePageTextAfterLogin();
-        //Assert.assertEquals(title3, "Twoje konto");
+        String title2 = loginPage.validatePageAfterLoginTitle();
+        Assert.assertEquals(title2, "Moje konto");
     }
 
     @Test(priority = 3, description = "Tworzenie koszyka - kategoria odziez")
-    public  void shoppingCartOdziezTest() throws Exception {
+    public  void shoppingCartOdziezTest(){
         shoppingCart = new ShoppingCart();
-        //Thread.sleep(500);
         shoppingCart.goToCategoryOdziez();
-        //String category = shoppingCart.categoryTextTest();
-        //Assert.assertEquals(category, "ODZIEŻ");
-        //Thread.sleep(500);
+        String category = shoppingCart.categoryTextTest();
+        Assert.assertEquals(category, "ODZIEŻ");
         driver.findElement(By.xpath(shoppingCart.odziezFinalXpath)).click();
-        //Thread.sleep(500);
         shoppingCart.addToCard();
-        //Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 4, description = "Tworzenie koszyka - kategoria akcesoria")
-    public  void shoppingCartAkcesoriaTest() throws Exception {
+    public  void shoppingCartAkcesoriaTest(){
         shoppingCart = new ShoppingCart();
-        //Thread.sleep(500);
         shoppingCart.goToCategoryAkcesoria();
-        //String category = shoppingCart.categoryTextTest();
-        //Assert.assertEquals(category, "AKCESORIA");
-        //Thread.sleep(500);
+        String category = shoppingCart.categoryTextTest();
+        Assert.assertEquals(category, "AKCESORIA");
         driver.findElement(By.xpath(shoppingCart.akcesoriaFinalXpath)).click();
-        //Thread.sleep(500);
         shoppingCart.addToCard();
-        //Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 5, description = "Tworzenie koszyka - kategoria sztuka")
-    public  void shoppingCartSztukaTest() throws Exception {
+    public  void shoppingCartSztukaTest(){
         shoppingCart = new ShoppingCart();
-        //Thread.sleep(500);
         shoppingCart.goToCategorySztuka();
-        //String category = shoppingCart.categoryTextTest();
-        //Assert.assertEquals(category, "SZTUKA");
-        //Thread.sleep(500);
+        String category = shoppingCart.categoryTextTest();
+        Assert.assertEquals(category, "SZTUKA");
         driver.findElement(By.xpath(shoppingCart.sztukaFinalXpath)).click();
-        //Thread.sleep(500);
         shoppingCart.addToCard();
-        //Thread.sleep(500);
         shoppingCart.continueShopping();
     }
 
     @Test(priority = 6, description = "Tworzenie koszyka - kategoria personalizowane")
-    public  void shoppingCartPersonalizowaneTest() throws Exception {
+    public  void shoppingCartPersonalizowaneTest(){
         shoppingCart = new ShoppingCart();
-        //Thread.sleep(500);
         shoppingCart.goToCategoryPersonalizowane();
-        //String category = shoppingCart.categoryTextTest();
-        //Assert.assertEquals(category, "PERSONALIZOWANE");
-        //Thread.sleep(500);
+        String category = shoppingCart.categoryTextTest();
+        Assert.assertEquals(category, "PERSONALIZOWANE");
         driver.findElement(By.xpath(shoppingCart.personalizowaneFinalXpath)).click();
-        //Thread.sleep(500);
         shoppingCart.addTextMessageToPersonalizowane();
-        //String message = shoppingCart.categoryTextTest();
-        //Assert.assertEquals(message, "Twoje dostosowywanie: tekst testowy 1.");
-        //Thread.sleep(500);
+        String message = shoppingCart.messageTextTest();
+        Assert.assertEquals(message, "Twoje dostosowywanie: Tekst testowy 1.");
         shoppingCart.addToCard();
-        //Thread.sleep(500);
         shoppingCart.endShopping();
     }
 
-    @Test(priority = 7, description = "Test utworzonego korzyka")
-    public  void shoppingCartCheckoutTest() throws Exception {
+    @Test(priority = 7, description = "Test podsumowania korzyka")
+    public  void shoppingCartCheckoutTest(){
         cartCheckout = new CartCheckout();
-        //String cartText = cartCheckout.cartCheckoutTextTest();
-        //Assert.assertEquals(cartText, "KOSZYK");
-        //String numberOfItems = cartCheckout.numberOfItemsTextTest();
-        //Assert.assertEquals(numberOfItems, "4 sztuk");
-        //String shippingCost = cartCheckout.cshippingCostTextTest();
-        //Assert.assertEquals(shippingCost, "15,00 zł");
-        //Thread.sleep(500);
+        String title = cartCheckout.cartCheckoutTitleTest();
+        Assert.assertEquals(title, "Koszyk");
+        String numberOfItems = cartCheckout.numberOfItemsTextTest();
+        Assert.assertEquals(numberOfItems, "4 sztuk");
+        String shippingCost = cartCheckout.cshippingCostTextTest();
+        Assert.assertEquals(shippingCost, "15,00 zł");
         cartCheckout.endCheckoutButtonTest();
     }
 
-    @Test(priority = 8, description = "Test podsumowania i platnosci")
-    public  void shoppingPaymentTest() throws Exception {
+    @Test(priority = 8, description = "Test realizacji zamówienia i potwierdzenia")
+    public  void shoppingPaymentTest(){
         orderPage = new OrderPage();
+        String title = orderPage.validateOrderPageTite();
+        Assert.assertEquals(title, "Sklep Odzieżowy");
         orderPage.editAddressButtonTest2();
-        orderPage.companyTextTest();
-        orderPage.phoneTextTest();
-        orderPage.vatnumberTextTest();
-        orderPage.address1TextTest();
-        orderPage.address2TextTest();
-        orderPage.postcodeTekstTest();
-        orderPage.cityTextTest();
+        orderPage.AdressTextTest();
         orderPage.confirmAddressButtonTest();
         orderPage.deliveryMessageTextTest();
         orderPage.confirmDeliveryButtonTest();
         orderPage.paymentoptionButtonTest();
         orderPage.termsCheckboxTest();
         orderPage.paymentconfirmationBittonTest();
-        boolean flag3 = driver.getTitle().equals("Potwierdzenie zamówienia");
-        Assert.assertTrue(flag3);
-        boolean flag2 = orderPage.validateOrderPageTite();
-        Assert.assertTrue(flag2);
+        String title2 = orderPage.validateOrderPageAfterClickTite();
+        Assert.assertEquals(title2, "Potwierdzenie zamówienia");
     }
 
 

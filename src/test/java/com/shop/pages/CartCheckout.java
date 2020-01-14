@@ -29,22 +29,21 @@ public class CartCheckout extends TestBase {
     }
 
 
-    public String cartCheckoutTextTest() throws InterruptedException {
-        waitForElement(cartText);
-        return cartText.getText();
+    public String cartCheckoutTitleTest(){
+        return driver.getTitle();
     }
 
-    public String numberOfItemsTextTest() throws InterruptedException {
+    public String numberOfItemsTextTest(){
         waitForElement(numberOfItems);
         return numberOfItems.getText();
     }
 
-    public String cshippingCostTextTest() throws InterruptedException {
+    public String cshippingCostTextTest(){
         waitForElement(shippingCost);
         return shippingCost.getText();
     }
 
-    public CartCheckout endCheckoutButtonTest() throws Exception {
+    public CartCheckout endCheckoutButtonTest(){
         try {
             waitForElement(endCheckoutButton);
             endCheckoutButton.click();
@@ -54,7 +53,7 @@ public class CartCheckout extends TestBase {
         return this;
     }
 
-    public CartCheckout customerInfoButtonTest() throws Exception {
+    public CartCheckout customerInfoButtonTest(){
         try {
             waitForElement(customerInfoButton);
             customerInfoButton.click();
