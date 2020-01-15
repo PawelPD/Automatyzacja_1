@@ -187,6 +187,7 @@ public class ShoppingCart extends TestBase {
         System.out.println("Uruchomiono zmianę produktu");
         System.out.println(categoryName.getText());
         Reporter.log("PRODUKT NIEDOSTEPNY W MAGAZYNIE, ROZPOCZETO ZMIANĘ PRODUKTU");
+        captureScreenshot();
         if(categoryName.getText().equals("Odzież")){
             String odziezValueZmianaWartosci      = Integer.toString(odziezRandom.nextInt(2)+1);
             while (true){
