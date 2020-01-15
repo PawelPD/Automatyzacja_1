@@ -71,7 +71,7 @@ public class TestBase {
 
     private static void setDriverDimGetURL() {
         driver.manage().deleteAllCookies();
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
