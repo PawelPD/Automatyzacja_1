@@ -18,9 +18,9 @@ public class ShoppingCart extends TestBase {
     Random sztukaRandom = new Random();
 
 
-    String odziezValue          = Integer.toString(odziezRandom.nextInt(1)+1);
-    String akcesoriaValue       = Integer.toString(akcesoriaRandom.nextInt(9)+1);
-    String sztukaValue          = Integer.toString(sztukaRandom.nextInt(6)+1);
+    String odziezValue          = Integer.toString(odziezRandom.nextInt(2)+1);
+    String akcesoriaValue       = Integer.toString(akcesoriaRandom.nextInt(10)+1);
+    String sztukaValue          = Integer.toString(sztukaRandom.nextInt(7)+1);
 
     String odziezFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odziezSecondText = "]";
