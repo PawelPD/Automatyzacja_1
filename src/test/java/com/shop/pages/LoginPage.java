@@ -43,10 +43,10 @@ public class LoginPage extends TestBase {
         try {
             waitForElement(submit);
             submit.click();
+            Reporter.log("Wprowadzono dane logowania i wybrano przycisk 'Zaloguj się'");
         }catch (Exception e){
             retryingFindClick(submit);
         }
-        Reporter.log("Wprowadzono dane logowania i wybrano przycisk 'Zaloguj się'");
         return this;
     }
 

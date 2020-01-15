@@ -156,10 +156,11 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(confirmAddressButton);
             confirmAddressButton.click();
+            Reporter.log("Zapisano edycję adresu");
         }catch (Exception e){
             retryingFindClick(confirmAddressButton);
         }
-        Reporter.log("Zapisano edycję adresu");
+
         return this;
     }
 
@@ -167,10 +168,10 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(confirmDeliveryButton);
             confirmDeliveryButton.click();
+            Reporter.log("Potwierdzono informacje o dostawie");
         }catch (Exception e){
             retryingFindClick(confirmDeliveryButton);
         }
-        Reporter.log("Potwierdzono informacje o dostawie");
         return this;
     }
 
@@ -178,10 +179,10 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(paymentoptionButton);
             paymentoptionButton.click();
+            Reporter.log("Wybrano płatność przy odbiorze");
         }catch (Exception e){
             retryingFindClick(paymentoptionButton);
         }
-        Reporter.log("Wybrano płatność przy odbiorze");
         return this;
     }
 
@@ -189,10 +190,10 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(termsCheckbox);
             termsCheckbox.click();
+            Reporter.log("Potwierdzono regulamin");
         }catch (Exception e){
             retryingFindClick(termsCheckbox);
         }
-        Reporter.log("Potwierdzono regulamin");
         return this;
     }
 
@@ -200,10 +201,11 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(paymentconfirmationButton);
             paymentconfirmationButton.click();
+            Reporter.log("Wybrano przycisk realizacji zamówienia");
+
         }catch (Exception e){
             retryingFindClick(paymentconfirmationButton);
         }
-        Reporter.log("Wybrano przycisk realizacji zamówienia");
         return new OrderPage();
     }
 
@@ -211,10 +213,10 @@ public class OrderPage extends TestBase {
         try {
             waitForElement(editAdressButton);
             editAdressButton.click();
+            Reporter.log("Wykonano przycisk edycji adresu");
         }catch (Exception e){
             retryingFindClick(editAdressButton);
         }
-        Reporter.log("Wykonano przycisk edycji adresu");
         return this;
     }
 

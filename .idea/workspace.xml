@@ -15,10 +15,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/base/TestBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="378">
+              <caret line="45" column="88" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,51 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/tests/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="122" column="43" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/OrderPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="204" column="9" lean-forward="true" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-                <element signature="e#1721#1722#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/HomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/ShoppingCart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-994">
-              <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+            <state relative-caret-position="-412">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,16 +54,16 @@
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/CartCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+            <state relative-caret-position="259">
+              <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,18 +101,18 @@
         <option value="$PROJECT_DIR$/src/config/shop.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/HomePageAfterLogin.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/helper/WaitHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/base/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/tests/PrzykladA.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/tests/PrzykladB.java" />
         <option value="$PROJECT_DIR$/testng2.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/PrzykladA.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/PrzykladB.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/OrderPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/tests/FirstTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/CartCheckout.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shop/base/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/OrderPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shop/pages/ShoppingCart.java" />
       </list>
     </option>
   </component>
@@ -152,9 +124,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="640" />
-    <option name="y" value="46" />
-    <option name="width" value="1284" />
+    <option name="x" value="479" />
+    <option name="y" value="45" />
+    <option name="width" value="1427" />
     <option name="height" value="909" />
   </component>
   <component name="ProjectId" id="1W4fLBOIisgjAmkZe0PTDyIsgOl" />
@@ -174,7 +146,44 @@
             <path>
               <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="screenshots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="drivers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
@@ -195,15 +204,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -212,7 +212,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -222,9 +239,96 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="drivers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-test-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatyzacja_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatyzacja_2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,7 +344,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579046455842" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579059002460" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tests-ew-dev7-fa1d6ffe97a010c8d7a6ffdbc57f6fe7dd0d246f" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -411,42 +515,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.14 at 21h 51m 51s.xml">
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 03h 55m 49s.xml">
       <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng2_xml - 2020.01.14 at 22h 13m 56s.xml">
-      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng2.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng2_xml - 2020.01.14 at 22h 15m 20s.xml">
-      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng2.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng2_xml - 2020.01.14 at 22h 16m 09s.xml">
-      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng2.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng2_xml - 2020.01.14 at 22h 17m 00s.xml">
-      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng2.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PrzykladB_uruchomienie_1 - 2020.01.14 at 22h 23m 48s.xml">
-      <configuration name="PrzykladB.uruchomienie_1" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng2_xml - 2020.01.14 at 22h 24m 33s.xml">
-      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng2.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 00h 49m 58s.xml">
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 09m 13s.xml">
       <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 00h 53m 55s.xml">
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 15m 44s.xml">
       <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 00h 55m 18s.xml">
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 16m 11s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 16m 41s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 17m 10s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 17m 36s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 18m 04s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 27m 25s.xml">
+      <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_Pawel_IdeaProjects_Automatyzacja_2_testng_xml - 2020.01.15 at 04h 30m 50s.xml">
       <configuration name="C:/Users/Pawel/IdeaProjects/Automatyzacja_2/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="256" y="48" width="1284" height="909" extended-state="0" />
-    <editor active="true" />
+    <frame x="479" y="45" width="1427" height="909" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34558824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29773226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -455,15 +558,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33634022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.06056701" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5863402" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.18298969" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32932165" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32860824" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -551,52 +654,47 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='id-address-delivery-address-4']/footer/a[1]&quot;)).click()</expression-string>
+        <expression-string>driver.getTitle()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='id-address-delivery-address-4']/footer/a[1]&quot;))</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='content']/div[1]/div[2]/ul/li/img&quot;)).isEnabled()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.name(&quot;//*[@id='id-address-delivery-address-4']/footer/a[1]&quot;))</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='content']/div[1]/div[2]/ul/li/img&quot;))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.name(&quot;edit-address&quot;))</expression-string>
+        <expression-string>driver.findElement(By.className(&quot;nav-link&quot;))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.xpath(&quot;.//*[contains(text(),'Wybrany adres będzie stosowany zarówno jako adres osobisty (do faktury) i jako adres dostawy.')]&quot;)).isDisplayed()</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='add-to-cart-or-refresh']/div[2]/div/div[1]/div/span[3]/button[1]/i&quot;))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='payment-confirmation']/div[1]&quot;))</expression-string>
+        <expression-string>we.isEnabled()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.name(&quot;confirm-addresses&quot;))</expression-string>
+        <expression-string>we.isDisplayed()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.name(&quot;edit-address&quot;)</expression-string>
+        <expression-string>driver.findElement(By.id(&quot;product-availability&quot;)).isDisplayed()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dsf</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.name(&quot;edit-address&quot;)).getText()</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='js-product-list']/div[1]/article[1]&quot;)).isDisplayed()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -619,24 +717,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/shop.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/HomePageAfterLogin.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/helper/WaitHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar!/org/openqa/selenium/support/ui/FluentWait.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -648,16 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/base/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,39 +766,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/config/shop.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/tests/FirstTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0.jar!/org/testng/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="122" column="43" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
+        <state relative-caret-position="170">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#1456#1457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/helper/WaitHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/base/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/CartCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="45" column="88" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -736,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/ShoppingCart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-994">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+        <state relative-caret-position="-931">
+          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -746,20 +852,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/OrderPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="204" column="9" lean-forward="true" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
+        <state relative-caret-position="344">
+          <caret line="219" column="20" lean-forward="true" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#1721#1722#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/pages/CartCheckout.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/tests/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        <state relative-caret-position="-412">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

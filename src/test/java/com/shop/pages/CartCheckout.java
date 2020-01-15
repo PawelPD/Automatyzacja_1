@@ -48,10 +48,11 @@ public class CartCheckout extends TestBase {
         try {
             waitForElement(endCheckoutButton);
             endCheckoutButton.click();
+            Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
         }catch (Exception e){
             retryingFindClick(endCheckoutButton);
         }
-        Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
+
         return this;
     }
 

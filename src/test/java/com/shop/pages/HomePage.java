@@ -45,11 +45,11 @@ public class HomePage extends TestBase {
     public HomePage goToLogin(){
         try {
             loginButton.click();
-
+            Reporter.log("Wybrano przycisk 'Zaloguj się'");
         }catch (Exception e){
             retryingFindClick(loginButton);
         }
-        Reporter.log("Wybrano przycisk 'Zaloguj się'");
+
         return this;
     }
 

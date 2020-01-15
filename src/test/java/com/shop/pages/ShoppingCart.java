@@ -88,10 +88,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(categoryOdziez);
             categoryOdziez.click();
+            Reporter.log("Wybrano kategorię 'Odzież'");
         }catch (Exception e){
             retryingFindClick(categoryOdziez);
         }
-        Reporter.log("Wybrano kategorię 'Odzież'");
         return new ShoppingCart();
     }
 
@@ -99,10 +99,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(categoryAkcesoria);
             categoryAkcesoria.click();
+            Reporter.log("Wybrano kategorię 'Akcesoria'");
         }catch (Exception e){
             retryingFindClick(categoryAkcesoria);
         }
-        Reporter.log("Wybrano kategorię 'Akcesoria'");
         return new ShoppingCart();
     }
 
@@ -111,10 +111,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(categorySztuka);
             categorySztuka.click();
+            Reporter.log("Wybrano kategorię 'Sztuka'");
         }catch (Exception e){
             retryingFindClick(categorySztuka);
         }
-        Reporter.log("Wybrano kategorię 'Sztuka'");
         return new ShoppingCart();
     }
 
@@ -122,10 +122,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(categoryPersonalizowane);
             categoryPersonalizowane.click();
+            Reporter.log("Wybrano kategorię 'Personalizowane'");
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
-        Reporter.log("Wybrano kategorię 'Personalizowane'");
         return new ShoppingCart();
     }
 
@@ -136,10 +136,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(addTextMessageButton);
             addTextMessageButton.click();
+            Reporter.log("Wybrano losowy produkt");
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
-        Reporter.log("Wybrano losowy produkt");
         return new ShoppingCart();
     }
 
@@ -148,10 +148,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(addToCardButton);
             addToCardButton.click();
+            Reporter.log("Dodano produkt do koszyka");
         }catch (Exception e){
-            retryingFindClick(addToCardButton);
+            isEnable(addToCardButton);
         }
-        Reporter.log("Dodano produkt do koszyka");
         return this;
     }
 
@@ -159,10 +159,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(continueShoppingButton);
             continueShoppingButton.click();
+            Reporter.log("Wybrano przycisk 'Kontynuuj zakupy'");
         }catch (Exception e){
             retryingFindClick(continueShoppingButton);
         }
-        Reporter.log("Wybrano przycisk 'Kontynuuj zakupy'");
         return this;
     }
 
@@ -170,10 +170,10 @@ public class ShoppingCart extends TestBase {
         try {
             waitForElement(endShoppingButton);
             endShoppingButton.click();
+            Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
         }catch (Exception e){
             retryingFindClick(endShoppingButton);
         }
-        Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
         return this;
     }
 

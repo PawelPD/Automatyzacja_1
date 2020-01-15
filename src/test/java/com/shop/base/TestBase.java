@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,8 +18,12 @@ import java.util.Calendar;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.fail;
+
 public class TestBase {
     public static WebDriver driver;
+    public static int errorCounter;
+
     /*
      * Zmienna odpowiedzialna za przekazywanie parametrów dla poszczególnych środowisk
      * */
@@ -26,8 +31,8 @@ public class TestBase {
     /*
      * Ustawienia time-outów podczas ładowania stron
      * */
-    public static long PAGE_LOAD_TIMEOUT = 10;
-    public static long IMPLICIT_WAIT = 10;
+    public static long PAGE_LOAD_TIMEOUT = 20;
+    public static long IMPLICIT_WAIT = 5;
 
     public static String todayStr;
 
@@ -164,7 +169,7 @@ public class TestBase {
     public boolean isElementVisible(WebElement we) {
 
         try {
-            return we.isDisplayed();
+            return we.isEnabled();
         } catch (NoSuchElementException e) {
             return false;
         }
@@ -257,15 +262,48 @@ public class TestBase {
             }
 
             attempts++;
-            if (attempts == 4){
+            if (attempts == 3){
                 try {
-                    throw new Exception();
+                    captureScreenshot();
+                    throw new Exception("Błąd kliknięcia w wybrany element");
                 } catch (Exception e) {
+                    fail(e.toString());
                     e.printStackTrace();
                 }
 
             }
         }
+        return result;
+    }
+
+    public boolean isEnable(WebElement we){
+        boolean result = false;
+        System.out.println("Blad klikniecia uruchomiono isEnable: " + we.toString());
+        if(we.isEnabled()){
+            try {
+                we.click();
+                result = true;
+                Reporter.log("Dodano produkt do koszyka");
+
+            } catch (Exception e) {
+                captureScreenshot();
+                Reporter.log("BŁĄD DODANIA PRODUKTU 1");
+                e.printStackTrace();
+            }
+        }
+        else {
+            try {
+                captureScreenshot();
+                Reporter.log("BŁĄD DODANIA PRODUKTU");
+                //fail("bład 1");
+                throw new Exception("Błąd kliknięcia w wybrany element");
+
+            }catch (Exception e) {
+                fail(e.toString());
+                e.printStackTrace();
+            }
+        }
+
         return result;
     }
 
