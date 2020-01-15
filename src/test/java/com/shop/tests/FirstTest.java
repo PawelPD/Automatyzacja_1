@@ -50,7 +50,7 @@ public class FirstTest extends TestBase {
         homePage.goToCookiesAccept();
         homePage.goToLogin();
         String title = homePage.validateLoginPageTitle();
-        Assert.assertEquals(title, "Nazwa użytkowika xx");
+        Assert.assertEquals(title, "Nazwa użytkowika");
         Reporter.log("Wczytano stronę logowania");
     }
 
