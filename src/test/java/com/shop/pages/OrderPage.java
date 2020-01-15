@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Reporter;
 
 
 public class OrderPage extends TestBase {
@@ -97,6 +98,7 @@ public class OrderPage extends TestBase {
         cityText.clear();
         cityText.sendKeys("Warszawa");
 
+        Reporter.log("Wykonano edycję adresu");
         return this;
     }
 
@@ -146,6 +148,7 @@ public class OrderPage extends TestBase {
         waitForElement(deliveryMessageText);
         deliveryMessageText.clear();
         deliveryMessageText.sendKeys("Tekst testowy dostawy");
+        Reporter.log("Wprowadzono wiadomość do dostawy");
         return this;
     }
 
@@ -156,6 +159,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(confirmAddressButton);
         }
+        Reporter.log("Zapisano edycję adresu");
         return this;
     }
 
@@ -166,6 +170,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(confirmDeliveryButton);
         }
+        Reporter.log("Potwierdzono informacje o dostawie");
         return this;
     }
 
@@ -176,6 +181,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(paymentoptionButton);
         }
+        Reporter.log("Wybrano płatność przy odbiorze");
         return this;
     }
 
@@ -186,6 +192,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(termsCheckbox);
         }
+        Reporter.log("Potwierdzono regulamin");
         return this;
     }
 
@@ -196,6 +203,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(paymentconfirmationButton);
         }
+        Reporter.log("Wybrano przycisk realizacji zamówienia");
         return new OrderPage();
     }
 
@@ -206,6 +214,7 @@ public class OrderPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(editAdressButton);
         }
+        Reporter.log("Wykonano przycisk edycji adresu");
         return this;
     }
 

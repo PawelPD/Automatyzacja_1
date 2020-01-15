@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Reporter;
 
 
 public class HomePage extends TestBase {
@@ -42,18 +43,17 @@ public class HomePage extends TestBase {
 
 
     public HomePage goToLogin(){
-        System.out.println("goToLogin");
         try {
             loginButton.click();
+
         }catch (Exception e){
             retryingFindClick(loginButton);
         }
-
+        Reporter.log("Wybrano przycisk 'Zaloguj się'");
         return this;
     }
 
     public HomePage goToCookiesAccept(){
-        System.out.println("goToCookiesAccept");
         try {
             waitForElement(cookiesAccept);
             cookiesAccept.click();

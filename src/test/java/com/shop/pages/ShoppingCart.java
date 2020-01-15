@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Reporter;
 
 import java.util.Random;
 
@@ -90,6 +91,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryOdziez);
         }
+        Reporter.log("Wybrano kategorię 'Odzież'");
         return new ShoppingCart();
     }
 
@@ -100,6 +102,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryAkcesoria);
         }
+        Reporter.log("Wybrano kategorię 'Akcesoria'");
         return new ShoppingCart();
     }
 
@@ -111,6 +114,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categorySztuka);
         }
+        Reporter.log("Wybrano kategorię 'Sztuka'");
         return new ShoppingCart();
     }
 
@@ -121,18 +125,21 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
+        Reporter.log("Wybrano kategorię 'Personalizowane'");
         return new ShoppingCart();
     }
 
     public ShoppingCart addTextMessageToPersonalizowane(){
         waitForElement(addTextMessage);
         addTextMessage.sendKeys("Tekst testowy 1.");
+        Reporter.log("Wprowadzono dostosowany teks");
         try {
             waitForElement(addTextMessageButton);
             addTextMessageButton.click();
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
+        Reporter.log("Wybrano losowy produkt");
         return new ShoppingCart();
     }
 
@@ -144,6 +151,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(addToCardButton);
         }
+        Reporter.log("Dodano produkt do koszyka");
         return this;
     }
 
@@ -154,6 +162,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(continueShoppingButton);
         }
+        Reporter.log("Wybrano przycisk 'Kontynuuj zakupy'");
         return this;
     }
 
@@ -164,6 +173,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(endShoppingButton);
         }
+        Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
         return this;
     }
 

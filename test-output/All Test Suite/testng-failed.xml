@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test thread-count="5" name="Strona glowna(failed)">
+    <classes>
+      <class name="com.shop.tests.FirstTest">
+        <methods>
+          <include name="shoppingCartSztukaTest"/>
+          <include name="shoppingCartOdziezTest"/>
+          <include name="shoppingPaymentTest"/>
+          <include name="shoppingCartPersonalizowaneTest"/>
+          <include name="getScreen"/>
+          <include name="loginTest"/>
+          <include name="closeBrowser"/>
+          <include name="shoppingCartAkcesoriaTest"/>
+          <include name="setUp"/>
+          <include name="shoppingCartCheckoutTest"/>
+        </methods>
+      </class> <!-- com.shop.tests.FirstTest -->
+    </classes>
+  </test> <!-- Strona glowna(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

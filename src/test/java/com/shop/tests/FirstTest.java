@@ -5,6 +5,7 @@ import com.shop.pages.*;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -33,10 +34,11 @@ public class FirstTest extends TestBase {
     /*
      * Test polegający na sprawdzeniu dostępności logo strony głównej oraz tytułu wczytanej strony
      * */
-    @Test(priority = 0, description = "Strona gllowna")
+    @Test(priority = 0, description = "Strona główna")
     public void homeTest() {
         String title = homePage.validateHomePageTitle();
         Assert.assertEquals(title, "Sklep Odzieżowy");
+        Reporter.log("Wczytano stronę główną sklepu");
     }
 
     /*
@@ -49,6 +51,7 @@ public class FirstTest extends TestBase {
         homePage.goToLogin();
         String title = homePage.validateLoginPageTitle();
         Assert.assertEquals(title, "Nazwa użytkowika");
+        Reporter.log("Wczytano stronę logowania");
     }
 
     @Test(priority = 2, description = "Logowania do konta klienta")
@@ -57,6 +60,7 @@ public class FirstTest extends TestBase {
         loginPage.doLogin(prop.getProperty("user"),prop.getProperty("pass"));
         String title2 = loginPage.validatePageAfterLoginTitle();
         Assert.assertEquals(title2, "Moje konto");
+        Reporter.log("Zalogowano użytkownika");
     }
 
     @Test(priority = 3, description = "Tworzenie koszyka - kategoria odziez")
@@ -65,7 +69,9 @@ public class FirstTest extends TestBase {
         shoppingCart.goToCategoryOdziez();
         String category = shoppingCart.categoryTextTest();
         Assert.assertEquals(category, "ODZIEŻ");
+        Reporter.log("Wczytano kategorię 'Odzież'");
         driver.findElement(By.xpath(shoppingCart.odziezFinalXpath)).click();
+        Reporter.log("Wybrano losowy produkt");
         shoppingCart.addToCard();
         shoppingCart.continueShopping();
     }
@@ -76,7 +82,9 @@ public class FirstTest extends TestBase {
         shoppingCart.goToCategoryAkcesoria();
         String category = shoppingCart.categoryTextTest();
         Assert.assertEquals(category, "AKCESORIA");
+        Reporter.log("Wczytano kategorię 'Akcesoria'");
         driver.findElement(By.xpath(shoppingCart.akcesoriaFinalXpath)).click();
+        Reporter.log("Wybrano losowy produkt");
         shoppingCart.addToCard();
         shoppingCart.continueShopping();
     }
@@ -87,7 +95,9 @@ public class FirstTest extends TestBase {
         shoppingCart.goToCategorySztuka();
         String category = shoppingCart.categoryTextTest();
         Assert.assertEquals(category, "SZTUKA");
+        Reporter.log("Wczytano kategorię 'Sztuka'");
         driver.findElement(By.xpath(shoppingCart.sztukaFinalXpath)).click();
+        Reporter.log("Wybrano losowy produkt");
         shoppingCart.addToCard();
         shoppingCart.continueShopping();
     }
@@ -98,6 +108,7 @@ public class FirstTest extends TestBase {
         shoppingCart.goToCategoryPersonalizowane();
         String category = shoppingCart.categoryTextTest();
         Assert.assertEquals(category, "PERSONALIZOWANE");
+        Reporter.log("Wczytano kategorię 'Personalizowane'");
         driver.findElement(By.xpath(shoppingCart.personalizowaneFinalXpath)).click();
         shoppingCart.addTextMessageToPersonalizowane();
         String message = shoppingCart.messageTextTest();
@@ -111,10 +122,13 @@ public class FirstTest extends TestBase {
         cartCheckout = new CartCheckout();
         String title = cartCheckout.cartCheckoutTitleTest();
         Assert.assertEquals(title, "Koszyk");
+        Reporter.log("Wczytano stronę podsumowania koszyka");
         String numberOfItems = cartCheckout.numberOfItemsTextTest();
         Assert.assertEquals(numberOfItems, "4 sztuk");
+        Reporter.log("Zweryfikowano ilość produktów w koszyku");
         String shippingCost = cartCheckout.cshippingCostTextTest();
         Assert.assertEquals(shippingCost, "15,00 zł");
+        Reporter.log("Zweryfikowano cenę dostawy");
         cartCheckout.endCheckoutButtonTest();
     }
 
@@ -123,6 +137,7 @@ public class FirstTest extends TestBase {
         orderPage = new OrderPage();
         String title = orderPage.validateOrderPageTite();
         Assert.assertEquals(title, "Sklep Odzieżowy");
+        Reporter.log("Wybrano stronę realizacji zamówienia");
         orderPage.editAddressButtonTest2();
         orderPage.AdressTextTest();
         orderPage.confirmAddressButtonTest();
@@ -133,6 +148,7 @@ public class FirstTest extends TestBase {
         orderPage.paymentconfirmationBittonTest();
         String title2 = orderPage.validateOrderPageAfterClickTite();
         Assert.assertEquals(title2, "Potwierdzenie zamówienia");
+        Reporter.log("Zamóienie zostało zrealizowane");
     }
 
 

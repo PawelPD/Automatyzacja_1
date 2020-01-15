@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Reporter;
 
 
 public class CartCheckout extends TestBase {
@@ -50,6 +51,7 @@ public class CartCheckout extends TestBase {
         }catch (Exception e){
             retryingFindClick(endCheckoutButton);
         }
+        Reporter.log("Wybrano przycisk 'Realizuj zamówienie'");
         return this;
     }
 

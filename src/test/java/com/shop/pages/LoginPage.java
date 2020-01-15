@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Reporter;
 
 
 public class LoginPage extends TestBase {
@@ -33,7 +34,6 @@ public class LoginPage extends TestBase {
     }
 
     public LoginPage doLogin(String user, String pass){
-        System.out.println("doLogin");
         waitForElement(username);
         waitForElement(password);
         username.clear();
@@ -46,6 +46,7 @@ public class LoginPage extends TestBase {
         }catch (Exception e){
             retryingFindClick(submit);
         }
+        Reporter.log("Wprowadzono dane logowania i wybrano przycisk 'Zaloguj się'");
         return this;
     }
 
