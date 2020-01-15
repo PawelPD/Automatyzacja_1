@@ -1,6 +1,7 @@
 package com.shop.pages;
 
 import com.shop.base.TestBase;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,8 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.testng.Reporter;
 
 import java.util.Random;
+
+import static org.testng.Assert.fail;
 
 
 public class ShoppingCart extends TestBase {
@@ -18,9 +21,9 @@ public class ShoppingCart extends TestBase {
     Random sztukaRandom = new Random();
 
 
-    String odziezValue          = Integer.toString(odziezRandom.nextInt(2)+1);
-    String akcesoriaValue       = Integer.toString(akcesoriaRandom.nextInt(10)+1);
-    String sztukaValue          = Integer.toString(sztukaRandom.nextInt(7)+1);
+    String odziezValue      = Integer.toString(odziezRandom.nextInt(2)+1);
+    String akcesoriaValue   = Integer.toString(akcesoriaRandom.nextInt(10)+1);
+    String sztukaValue      = Integer.toString(sztukaRandom.nextInt(7)+1);
 
     String odziezFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odziezSecondText = "]";
@@ -42,6 +45,9 @@ public class ShoppingCart extends TestBase {
 
     @FindBy(className = "customization-message")
     public WebElement messageText;
+
+    @FindBy(xpath = "//*[@id='wrapper']/div/nav/ol/li[2]/a/span")
+    public WebElement categoryName;
 
     @FindBy(id = "category-3")
     WebElement categoryOdziez;
@@ -92,7 +98,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryOdziez);
         }
-        return new ShoppingCart();
+        return this;
     }
 
     public ShoppingCart goToCategoryAkcesoria(){
@@ -103,7 +109,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryAkcesoria);
         }
-        return new ShoppingCart();
+        return this;
     }
 
 
@@ -115,7 +121,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categorySztuka);
         }
-        return new ShoppingCart();
+        return this;
     }
 
     public ShoppingCart goToCategoryPersonalizowane(){
@@ -126,7 +132,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
-        return new ShoppingCart();
+        return this;
     }
 
     public ShoppingCart addTextMessageToPersonalizowane(){
@@ -140,7 +146,7 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(categoryPersonalizowane);
         }
-        return new ShoppingCart();
+        return this;
     }
 
 
@@ -174,6 +180,107 @@ public class ShoppingCart extends TestBase {
         }catch (Exception e){
             retryingFindClick(endShoppingButton);
         }
+        return this;
+    }
+
+    public ShoppingCart changeProduct(){
+        System.out.println("Uruchomiono zmianę produktu");
+        System.out.println(categoryName.getText());
+        if(categoryName.getText().equals("Odzież")){
+            String odziezValueZmianaWartosci      = Integer.toString(odziezRandom.nextInt(2)+1);
+            while (true){
+                if(odziezValueZmianaWartosci.equals(odziezValue)){
+                    odziezValueZmianaWartosci      = Integer.toString(odziezRandom.nextInt(2)+1);
+                }
+                else
+                    System.out.println("przed break");
+                    break;
+            }
+            odziezFinalXpath = odziezFirstText + odziezValueZmianaWartosci + odziezSecondText;
+            goToCategoryOdziez();
+            driver.findElement(By.xpath(odziezFinalXpath)).click();
+        }
+        if(categoryName.getText().equals("Akcesoria")){
+            String akcesoriaValueZmianaWartosci      = Integer.toString(akcesoriaRandom.nextInt(10)+1);
+            while (true){
+                if(akcesoriaValueZmianaWartosci.equals(akcesoriaValue)){
+                    akcesoriaValueZmianaWartosci      = Integer.toString(akcesoriaRandom.nextInt(10)+1);
+                }
+                else
+                    System.out.println("przed break");
+                    break;
+            }
+            akcesoriaFinalXpath = akcesoriaFirstText + akcesoriaValueZmianaWartosci + odakcesoriaSecondText;
+            goToCategoryAkcesoria();
+            driver.findElement(By.xpath(akcesoriaFinalXpath)).click();
+        }
+        if(categoryName.getText().equals("Sztuka")){
+
+            String sztukaValueZmianaWartosci      = Integer.toString(sztukaRandom.nextInt(7)+1);
+            while (true){
+                if(sztukaValueZmianaWartosci.equals(sztukaValue)){
+                    sztukaValueZmianaWartosci      = Integer.toString(sztukaRandom.nextInt(7)+1);
+                }
+                else
+                    System.out.println("przed break");
+                    break;
+            }
+            sztukaFinalXpath = sztukaFirstText + sztukaValueZmianaWartosci + sztukaSecondText;
+            goToCategorySztuka();
+            driver.findElement(By.xpath(sztukaFinalXpath)).click();
+        }
+        return this;
+    }
+
+    public ShoppingCart isEnable(WebElement we){
+        boolean result = false;
+        System.out.println("Blad klikniecia uruchomiono isEnable: " + we.toString());
+        if(we.isEnabled()){
+            try {
+                we.click();
+                result = true;
+                Reporter.log("Dodano produkt do koszyka");
+
+            } catch (Exception e) {
+                captureScreenshot();
+                Reporter.log("BŁĄD DODANIA PRODUKTU 1");
+                e.printStackTrace();
+            }
+        }
+        else {
+            int licznikZmianProduktu = 0;
+            while(licznikZmianProduktu < 5){
+                changeProduct();
+                if(addToCardButton.isEnabled()){
+                    try {
+                        we.click();
+                        result = true;
+                        Reporter.log("Dodano produkt do koszyka");
+                        break;
+
+                    } catch (Exception e) {
+                        captureScreenshot();
+                        Reporter.log("BŁĄD DODANIA PRODUKTU 1");
+                        e.printStackTrace();
+                    }
+                }
+            }
+            if(result == false)
+            {
+                try {
+                    captureScreenshot();
+                    Reporter.log("BŁĄD DODANIA PRODUKTU");
+                    //fail("bład 1");
+                    throw new Exception("Błąd kliknięcia w wybrany element");
+
+                }catch (Exception e) {
+                    fail(e.toString());
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
         return this;
     }
 

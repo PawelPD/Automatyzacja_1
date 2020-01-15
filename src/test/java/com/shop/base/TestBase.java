@@ -3,11 +3,9 @@ package com.shop.base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +20,6 @@ import static org.testng.Assert.fail;
 
 public class TestBase {
     public static WebDriver driver;
-    public static int errorCounter;
 
     /*
      * Zmienna odpowiedzialna za przekazywanie parametrów dla poszczególnych środowisk
@@ -62,12 +59,12 @@ public class TestBase {
 
         public static void initialization() {
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
+            //ChromeOptions options = new ChromeOptions();
 
-            options.addArguments("--window-size=1920,1080");
+            //options.addArguments("--window-size=1920,1080");
             //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
-            driver = new ChromeDriver(options);
-            //driver = new ChromeDriver();
+            //driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
             //driver.get(prop.getProperty("url"));
             setDriverDimGetURL();
         }
@@ -280,35 +277,5 @@ public class TestBase {
         return result;
     }
 
-    public boolean isEnable(WebElement we){
-        boolean result = false;
-        System.out.println("Blad klikniecia uruchomiono isEnable: " + we.toString());
-        if(we.isEnabled()){
-            try {
-                we.click();
-                result = true;
-                Reporter.log("Dodano produkt do koszyka");
-
-            } catch (Exception e) {
-                captureScreenshot();
-                Reporter.log("BŁĄD DODANIA PRODUKTU 1");
-                e.printStackTrace();
-            }
-        }
-        else {
-            try {
-                captureScreenshot();
-                Reporter.log("BŁĄD DODANIA PRODUKTU");
-                //fail("bład 1");
-                throw new Exception("Błąd kliknięcia w wybrany element");
-
-            }catch (Exception e) {
-                fail(e.toString());
-                e.printStackTrace();
-            }
-        }
-
-        return result;
-    }
 
 }
