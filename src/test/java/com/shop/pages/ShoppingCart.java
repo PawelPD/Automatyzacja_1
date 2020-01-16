@@ -250,35 +250,16 @@ public class ShoppingCart extends TestBase {
             }
         }
         else {
-            int licznikZmianProduktu = 0;
-            while(licznikZmianProduktu < 5){
-                changeProduct();
-                if(addToCardButton.isEnabled()){
-                    try {
-                        we.click();
-                        result = true;
-                        Reporter.log("Dodano produkt do koszyka");
-                        break;
 
-                    } catch (Exception e) {
-                        captureScreenshot();
-                        Reporter.log("BŁĄD DODANIA PRODUKTU 1");
-                        e.printStackTrace();
-                    }
-                }
-            }
-            if(result == false)
-            {
-                try {
-                    captureScreenshot();
-                    Reporter.log("BŁĄD DODANIA PRODUKTU");
-                    //fail("bład 1");
-                    throw new Exception("Błąd kliknięcia w wybrany element");
+            try {
+                captureScreenshot();
+                Reporter.log("BŁĄD DODANIA PRODUKTU");
+                //fail("bład 1");
+                throw new Exception("Błąd kliknięcia w wybrany element");
 
-                }catch (Exception e) {
-                    fail(e.toString());
-                    e.printStackTrace();
-                }
+            }catch (Exception e) {
+                fail(e.toString());
+                e.printStackTrace();
             }
 
         }
