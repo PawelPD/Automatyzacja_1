@@ -182,7 +182,7 @@ public class ShoppingCart extends TestBase {
         }
         return this;
     }
-
+/*
     public ShoppingCart changeProduct(){
         System.out.println("Uruchomiono zmianę produktu");
         System.out.println(categoryName.getText());
@@ -233,7 +233,7 @@ public class ShoppingCart extends TestBase {
         }
         return this;
     }
-
+*/
     public ShoppingCart isEnable(WebElement we){
         boolean result = false;
         System.out.println("Blad klikniecia uruchomiono isEnable: " + we.toString());
@@ -254,7 +254,7 @@ public class ShoppingCart extends TestBase {
             try {
                 captureScreenshot();
                 Reporter.log("BŁĄD DODANIA PRODUKTU");
-                //fail("bład 1");
+                fail("bład 1");
                 throw new Exception("Błąd kliknięcia w wybrany element");
 
             }catch (Exception e) {
