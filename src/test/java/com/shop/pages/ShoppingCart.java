@@ -27,7 +27,7 @@ public class ShoppingCart extends TestBase {
 
     String odziezFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odziezSecondText = "]";
-    public String odziezFinalXpath = odziezFirstText + odziezValue + odziezSecondText;
+    public String odziezFinalXpath = "5" //odziezFirstText + odziezValue + odziezSecondText;
 
     String akcesoriaFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odakcesoriaSecondText = "]";
