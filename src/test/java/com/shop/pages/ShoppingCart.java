@@ -27,7 +27,7 @@ public class ShoppingCart extends TestBase {
 
     String odziezFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odziezSecondText = "]";
-    public String odziezFinalXpath = "5"; //odziezFirstText + odziezValue + odziezSecondText;
+    public String odziezFinalXpath = odziezFirstText + odziezValue + odziezSecondText;
 
     String akcesoriaFirstText = "//*[@id='js-product-list']/div[1]/article[";
     String odakcesoriaSecondText = "]";
@@ -182,7 +182,7 @@ public class ShoppingCart extends TestBase {
         }
         return this;
     }
-/*
+
     public ShoppingCart changeProduct(){
         System.out.println("Uruchomiono zmianę produktu");
         System.out.println(categoryName.getText());
@@ -233,7 +233,7 @@ public class ShoppingCart extends TestBase {
         }
         return this;
     }
-*/
+
     public ShoppingCart isEnable(WebElement we){
         boolean result = false;
         System.out.println("Blad klikniecia uruchomiono isEnable: " + we.toString());
@@ -250,16 +250,35 @@ public class ShoppingCart extends TestBase {
             }
         }
         else {
+            int licznikZmianProduktu = 0;
+            while(licznikZmianProduktu < 5){
+                changeProduct();
+                if(addToCardButton.isEnabled()){
+                    try {
+                        we.click();
+                        result = true;
+                        Reporter.log("Dodano produkt do koszyka");
+                        break;
 
-            try {
-                captureScreenshot();
-                Reporter.log("BŁĄD DODANIA PRODUKTU");
-                fail("bład 1");
-                throw new Exception("Błąd kliknięcia w wybrany element");
+                    } catch (Exception e) {
+                        captureScreenshot();
+                        Reporter.log("BŁĄD DODANIA PRODUKTU 1");
+                        e.printStackTrace();
+                    }
+                }
+            }
+            if(result == false)
+            {
+                try {
+                    captureScreenshot();
+                    Reporter.log("BŁĄD DODANIA PRODUKTU");
+                    //fail("bład 1");
+                    throw new Exception("Błąd kliknięcia w wybrany element");
 
-            }catch (Exception e) {
-                fail(e.toString());
-                e.printStackTrace();
+                }catch (Exception e) {
+                    fail(e.toString());
+                    e.printStackTrace();
+                }
             }
 
         }
