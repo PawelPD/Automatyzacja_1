@@ -149,6 +149,7 @@ public class FirstTest extends TestBase {
         String title2 = orderPage.validateOrderPageAfterClickTite();
         Assert.assertEquals(title2, "Potwierdzenie zamówienia");
         Reporter.log("Zamóienie zostało zrealizowane");
+        captureScreenshot();
     }
 
 
