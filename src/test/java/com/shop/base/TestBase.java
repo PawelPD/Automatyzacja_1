@@ -58,7 +58,7 @@ public class TestBase {
      * */
 
         public static void initialization() {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
             //ChromeOptions options = new ChromeOptions();
 
             //options.addArguments("--window-size=1920,1080");

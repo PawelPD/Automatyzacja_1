@@ -22,8 +22,7 @@ public class ShoppingCart extends TestBase {
 
 
     String odziezValue      = Integer.toString(odziezRandom.nextInt(2)+1);
-    String akcesoriaValue   = "5";
-    //= Integer.toString(akcesoriaRandom.nextInt(10)+1);
+    String akcesoriaValue   = Integer.toString(akcesoriaRandom.nextInt(10)+1);
     String sztukaValue      = Integer.toString(sztukaRandom.nextInt(7)+1);
 
     String odziezFirstText = "//*[@id='js-product-list']/div[1]/article[";
@@ -157,7 +156,7 @@ public class ShoppingCart extends TestBase {
             addToCardButton.click();
             Reporter.log("Dodano produkt do koszyka");
         }catch (Exception e){
-            retryingFindClick(addToCardButton);
+            isEnable(addToCardButton);
         }
         return this;
     }
