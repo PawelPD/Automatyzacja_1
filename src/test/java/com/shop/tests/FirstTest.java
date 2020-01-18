@@ -112,7 +112,7 @@ public class FirstTest extends TestBase {
         driver.findElement(By.xpath(shoppingCart.personalizowaneFinalXpath)).click();
         shoppingCart.addTextMessageToPersonalizowane();
         String message = shoppingCart.messageTextTest();
-        Assert.assertEquals(message, "Twoje dostosowywanie: Tekst testowy 1. jakistekst");
+        Assert.assertEquals(message, "Twoje dostosowywanie: Tekst testowy 1.");
         shoppingCart.addToCard();
         shoppingCart.endShopping();
     }
