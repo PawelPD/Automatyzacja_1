@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class FirstTest extends TestBase {
+public class FirstTest extends TestBase 
 
     HomePage homePage;
     LoginPage loginPage;
